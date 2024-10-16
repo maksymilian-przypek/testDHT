@@ -5,15 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Pole do wprowadzania adresu IP -->
+    <EditText
+        android:id="@+id/ipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź adres IP"
+        android:inputType="textUri"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"/>
+
+    <!-- Przycisk do zapisywania adresu IP -->
+    <Button
+        android:id="@+id/saveIpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz adres IP"
+        android:layout_below="@id/ipEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Tekst wyświetlający temperaturę -->
     <TextView
         android:id="@+id/temperatureTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Temperatura: -- °C"
         android:textSize="20sp"
+        android:layout_below="@id/saveIpButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="30dp"/>
 
+    <!-- Tekst wyświetlający wilgotność -->
     <TextView
         android:id="@+id/humidityTextView"
         android:layout_width="wrap_content"
@@ -24,6 +48,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
+    <!-- Przycisk do odświeżania danych -->
     <Button
         android:id="@+id/refreshButton"
         android:layout_width="wrap_content"
